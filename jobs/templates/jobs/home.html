@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="bg-light pt-2">
+<div class="container container-fluid">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+
+            {% for job in jobs.all %}
+            <div class="card card-body mb-2">
+                <div class="row p-2">
+                    <div class="col-md-3">
+                        <h4>{{ job.employer }}</h4>
+                        <small>{{ job.location }}</small>
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <h5 class="mb-3">{{ job.position }}</h5>
+                        <p>{{ job.summary }}</p>
+                    </div>
+                    <div class="col-md-3 m-auto">
+                        <div class="p-2 text-center bg-light border rounded-3">
+                            <h4>Dates</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="mb-0" style="color: var(--clr-grey-3)">from</p>
+                                    <small style="color: var(--clr-primary-3)">{{ job.from_date_pretty }}</small>
+                                </div>
+                                <div class="col-6">
+                                    <p class="mb-0" style="color: var(--clr-grey-3)">to</p>
+                                    <small style="color: var(--clr-primary-3)">{{ job.to_date_pretty }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}
