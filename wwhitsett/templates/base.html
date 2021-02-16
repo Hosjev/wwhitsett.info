@@ -9,8 +9,8 @@
     <meta name="generator" content="Hugo 0.79.0">
     <title>Portfolio</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
-
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -37,7 +37,7 @@
     </style>
 
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'jobs/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'jobs/style.css' %}">
 </head>
 
 <body>
@@ -53,14 +53,20 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="#">
-                            <i class="fab fa-github fa-2x"></i>
-                        </a>
-                        <a class="nav-link" href="#">
-                            <i class="fab fa-linkedin fa-2x"></i>
-                        </a>
-                        <!-- <a class="nav-link" href="{% static 'Fake-Resume.pdf' %}">Resume</a> -->
-                        <a class="nav-link" href="#">Resume</a>
+                        <div class="px-sm-3">
+                            <a class="nav-link" href="#">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="px-sm-3">
+                            <a class="nav-link" href="#">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="px-sm-3">
+                            <!-- <a class="nav-link" href="{% static 'Fake-Resume.pdf' %}">Resume</a> -->
+                            <a class="nav-link text-uppercase lead" href="#">Resume</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,9 +96,102 @@
         {% endblock %}
 
 
+        <!-- write/read styled section -->  
+        <section id="measurements" class="pt-2">
+            <div class="container container-fluid">
+                <div class="row bg-dark text-white mx-0 rounded-2">
+                    <div class="col text-center display-4">Technologies</div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-5">writeability</div>
+                        <div class="col-5">readability</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">tech1</div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">tech2</div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">tech3</div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">tech4</div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">tech5</div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">tech6</div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
-    <footer class="text-muted py-5">
+    <footer class="text-muted py-3 mt-5 bg-dark text-white">
         <div class="container">
             <p class="float-end mb-1">
                 <a href="#">Back to top</a>
