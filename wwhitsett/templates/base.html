@@ -43,7 +43,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top text-white px-4">
             <div class="container-fluid mx-md-5">
                 <a class="navbar-brand" href="{% url 'home' %}">Wendi Whitsett</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,18 +54,32 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <div class="px-sm-3">
-                            <a class="nav-link" href="#">
+                            <a
+                            class="nav-link"
+                            href="https://github.com/Hosjev"
+                            target="_blank"
+                            data-toggle="tooltip"
+                            data-html="true"
+                            data-placement="top"
+                            title="GitHub Repo">
                                 <i class="fab fa-github fa-2x"></i>
                             </a>
                         </div>
                         <div class="px-sm-3">
-                            <a class="nav-link" href="#">
+                            <a
+                            class="nav-link"
+                            href="https://www.linkedin.com/in/wendi-whitsett"
+                            target="_blank"
+                            data-toggle="tooltip"
+                            data-html="true"
+                            data-placement="top"
+                            title="LinkedIn">
                                 <i class="fab fa-linkedin fa-2x"></i>
                             </a>
                         </div>
                         <div class="px-sm-3">
                             <!-- <a class="nav-link" href="{% static 'Fake-Resume.pdf' %}">Resume</a> -->
-                            <a class="nav-link text-uppercase lead" href="#">Resume</a>
+                            <a id="resume-link" class="nav-link text-uppercase lead resume" href="#">Resume</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +118,7 @@
                     <div class="row">
                         <div class="col-2"></div>
                         <div class="col-5">writeability</div>
-                        <div class="col-5">readability</div>
+                        <div class="col-5">debug/readability</div>
                     </div>
                     <div class="row">
                         <div class="col-2">tech1</div>
@@ -194,7 +208,7 @@
     <footer class="text-muted py-3 mt-5 bg-dark text-white">
         <div class="container">
             <p class="float-end mb-1">
-                <a href="#">Back to top</a>
+                <a class="top-link" href="#">Back to top</a>
             </p>
             <p>Copyright &copy; WW <span>{% now "Y" %}</span></p>
         </div>
@@ -208,7 +222,16 @@
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous"></script>
 
+    <script>
+        $('[data-toggle="tooltip"').tooltip();
 
+        function onLinkHover (x) {
+            x.style.color = "white";
+        }
+        function onLinkHoverOut (x) {
+            x.style.color = "blue"; 
+        }
+    </script>
 </body>
 
 </html>

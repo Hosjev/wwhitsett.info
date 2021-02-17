@@ -76,3 +76,23 @@ Page layout
 #section-head {
   padding-top: 80px !important;
 }
+
+a.nav-link {
+  color: aliceblue !important;
+}
+
+a.nav-link:hover {
+  color: aqua !important;
+}
+
+#resume-link {
+  color: aqua !important;
+}
+
+.top-link {
+  color: aqua;
+}
+
+.top-link:hover {
+  font-weight: bolder;
+}
