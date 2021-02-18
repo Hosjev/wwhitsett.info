@@ -19,23 +19,6 @@
     <!-- Favicons -->
     <meta name="theme-color" content="#7952b3">
 
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'jobs/style.css' %}">
 </head>
@@ -57,11 +40,7 @@
                             <a
                             class="nav-link"
                             href="https://github.com/Hosjev"
-                            target="_blank"
-                            data-toggle="tooltip"
-                            data-html="true"
-                            data-placement="top"
-                            title="GitHub Repo">
+                            target="_blank">
                                 <i class="fab fa-github fa-2x"></i>
                             </a>
                         </div>
@@ -69,11 +48,7 @@
                             <a
                             class="nav-link"
                             href="https://www.linkedin.com/in/wendi-whitsett"
-                            target="_blank"
-                            data-toggle="tooltip"
-                            data-html="true"
-                            data-placement="top"
-                            title="LinkedIn">
+                            target="_blank">
                                 <i class="fab fa-linkedin fa-2x"></i>
                             </a>
                         </div>
@@ -91,15 +66,31 @@
 
         <section class="text-center container container-fluid" id="section-head">
             <div class="row">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">I like to make jokes.</h1>
-                    <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-                        necessitatibus quis repellendus unde quas odio ex quam distinctio ea adipisci. Sed, veritatis
-                        officiis enim vitae quisquam dignissimos aspernatur voluptas exercitationem.</p>
+                <div class="col-lg-2 mx-auto">
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <img src="{% static 'Wprofile2.jpg' %}" alt="" width="300" height="350" class="img img-fluid">
+                    <p class="lead text-muted">Hi there! I'm a software engineer with 18+ years of experience and looking for my next grand adventure in the industry. Check out my most recent work below or simply download my resume up top.</p>
                     <p>
-                        <a href="mailto:fozzybear@gmail.com" class="btn btn-primary my-2">Email Me</a>
+                        <a href="mailto:hosjev@gmail.com" class="btn btn-primary my-2">Email Me</a>
                     </p>
-                    <!-- <img src="{% static 'KIMG0394.JPG' %}" alt="" class="img-fluid"> -->
+                </div>
+                <div class="col-lg-2 mx-auto d-flex align-self-end">
+                    <div class="thought-container">
+                        <img src="{% static 'thought.svg' %}" alt="" class="thought-bubble">
+                        <div class="thought-overlay">
+                            <div class="inner-text"><a id="past-info" href="#section-head">What has Wendi been up to lately?</a></div>
+                        </div>
+                    </div>
+
+                    <!-- <a id="past-info" href="#section-head">
+                        <div class="d-none d-md-block">
+                            <img src="{% static 'bubbleR.png' %}" alt="">
+                        </div>
+                        <div class="d-md-none">
+                            <img src="{% static 'bubbleL.png' %}" alt="">
+                        </div>
+                    </a> -->
                 </div>
             </div>
         </section>
@@ -118,7 +109,7 @@
                     <div class="row">
                         <div class="col-2"></div>
                         <div class="col-5">writeability</div>
-                        <div class="col-5">debug/readability</div>
+                        <div class="col-5">readability</div>
                     </div>
                     <div class="row">
                         <div class="col-2">tech1</div>
@@ -202,6 +193,22 @@
             </div>
         </section>
 
+        <!-- UP TO modal -->
+        <div class="modal text-dark mt-5" id="inner-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h4 class="d-inline modal-title">Recent activity...</h4>
+                        <button class="close modal-close bg-transparent border-0 text-white" data-dismiss="modal">
+                            <i class="fas fa-times fa-2x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        After the sale of my company, <strong>ITA Software</strong>, to <strong>Google</strong>, I took some time off to write, donate some of my technical skills to non-profits (mostly UX/UI work), delve into the doggy rescue business, and learn fencing. You can see some of the fruits of my labor <a href="http://wstone.site" target="_blank">here</a>. But after intense study over the past six months, I'm ready to tackle the next technical challenge! I love coding, and more so, I love problem-solving!
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -215,6 +222,11 @@
     </footer>
 
 
+    <script src="{% static 'js/app.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
         crossorigin="anonymous"></script>
@@ -222,15 +234,10 @@
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous"></script>
 
-    <script>
-        $('[data-toggle="tooltip"').tooltip();
 
-        function onLinkHover (x) {
-            x.style.color = "white";
-        }
-        function onLinkHoverOut (x) {
-            x.style.color = "blue"; 
-        }
+    <script>
+        // Init tooltips
+        $('[data-toggle="tooltip"]').tooltip();
     </script>
 </body>
 
