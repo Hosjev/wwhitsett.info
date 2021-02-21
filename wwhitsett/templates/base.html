@@ -37,6 +37,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <div class="px-sm-3">
+                            <a class="nav-link"
+                            id="study-info"
+                            href="#section-head">
+                                <i class="fa fa-chalkboard-teacher fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="px-sm-3">
                             <a
                             class="nav-link"
                             href="https://github.com/Hosjev"
@@ -69,11 +76,13 @@
                 <div class="col-lg-2 mx-auto">
                 </div>
                 <div class="col-lg-8 mx-auto">
-                    <img src="{% static 'Wprofile2.jpg' %}" alt="" width="300" height="350" class="img img-fluid">
-                    <p class="lead text-muted">Hi there! I'm a software engineer with 18+ years of experience and looking for my next grand adventure in the industry. Check out my most recent work below or simply download my resume up top.</p>
-                    <p>
-                        <a href="mailto:hosjev@gmail.com" class="btn btn-primary my-2">Email Me</a>
-                    </p>
+                    <img src="{% static 'owlC.jpg' %}"
+                    width="400"
+                    height="265"
+                    class="img img-fluid"
+                    style="box-shadow: 0 2px 5px rgba(0, 0, 0, 70%);">
+                    <p class="lead text-muted pt-2">Hi there! I'm a software engineer with 18+ years of experience and looking for my next grand adventure in the industry. Check out my most recent work below or simply download my resume up top.</p>
+                    <div class="pt-0 pb-2"><a href="mailto:hosjev@gmail.com" class="btn btn-primary my-2">Email Me</a></div>
                 </div>
                 <div class="col-lg-2 mx-auto d-flex align-self-end">
                     <div class="thought-container">
@@ -82,7 +91,6 @@
                             <div class="inner-text"><a id="past-info" href="#section-head">What has Wendi been up to lately?</a></div>
                         </div>
                     </div>
-
                     <!-- <a id="past-info" href="#section-head">
                         <div class="d-none d-md-block">
                             <img src="{% static 'bubbleR.png' %}" alt="">
@@ -95,11 +103,8 @@
             </div>
         </section>
 
-
-
         {% block content %}
         {% endblock %}
-
 
         <!-- write/read styled section -->  
         <section id="measurements" class="pt-2">
@@ -194,17 +199,42 @@
         </section>
 
         <!-- UP TO modal -->
-        <div class="modal text-dark mt-5" id="inner-modal">
+        <div class="modal text-dark mt-5" id="past-modal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-dark text-white">
                         <h4 class="d-inline modal-title">Recent activity...</h4>
-                        <button class="close modal-close bg-transparent border-0 text-white" data-dismiss="modal">
+                        <button class="close past-close bg-transparent border-0 text-white" data-dismiss="modal">
                             <i class="fas fa-times fa-2x"></i>
                         </button>
                     </div>
                     <div class="modal-body bg-light">
                         After the sale of my company, <strong>ITA Software</strong>, to <strong>Google</strong>, I took some time off to write, donate some of my technical skills to non-profits (mostly UX/UI work), delve into the doggy rescue business, and learn fencing. You can see some of the fruits of my labor <a href="http://wstone.site" target="_blank">here</a>. But after intense study over the past six months, I'm ready to tackle the next technical challenge! I love coding, and more so, I love problem-solving!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- learnin' modal -->
+        <div class="modal text-dark mt-5" id="study-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h4 class="d-inline modal-title">Recent study...</h4>
+                        <button class="close study-close bg-transparent border-0 text-white" data-dismiss="modal">
+                            <i class="fas fa-times fa-2x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        <ul class="list-group">
+                            <li class="list-group-item">Algo - Python</li>
+                            <li class="list-group-item">Udemy - Java</li>
+                            <li class="list-group-item">Udemy - Javascript</li>
+                            <li class="list-group-item">Udemy - Angular</li>
+                            <li class="list-group-item">Udemy - Bootstrap</li>
+                            <li class="list-group-item">Udemy - Django</li>
+                            <li class="list-group-item">Toptal - Python</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -222,7 +252,7 @@
     </footer>
 
 
-    <script src="{% static 'js/app.js' %}"></script>
+    <script type="module" src="{% static 'js/app.js' %}"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -237,7 +267,7 @@
 
     <script>
         // Init tooltips
-        $('[data-toggle="tooltip"]').tooltip();
+        // $('[data-toggle="tooltip"]').tooltip();
     </script>
 </body>
 
