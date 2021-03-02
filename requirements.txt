@@ -1,4 +1,6 @@
- pip install virtualenv
- pip install Django==2.2.*
- pip install Pillow==8.1.0
- pip install pyscopg2-binary
+Django==2.2
+gunicorn==20.0.4
+Pillow==8.1.0
+psycopg2-binary==2.8.6
+pytz==2021.1
+sqlparse==0.4.1
