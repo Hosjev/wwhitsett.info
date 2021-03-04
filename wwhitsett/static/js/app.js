@@ -1,6 +1,7 @@
 import get from "./utils/getElement.js";
 
-const mobileNav = get("#navbarNavAltMarkup");
+const mainContainer = get("#main-section");
+const mobileNav = get("nav .collapse");
 
 // load some results after DOM
 window.addEventListener("DOMContentLoaded", () => {
@@ -9,8 +10,10 @@ window.addEventListener("DOMContentLoaded", () => {
     loadModal("study");
 
     // mouse moving out of nav container, remove it
-    mobileNav.addEventListener("mouseout", () => {
-        mobileNav.classList.remove("show");
+    mainContainer.addEventListener("mouseover", () => {
+        if (mobileNav.classList.contains("show")) {
+            mobileNav.classList.remove("show");
+        }
     })
 });
 
