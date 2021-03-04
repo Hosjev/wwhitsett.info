@@ -91,10 +91,17 @@ a.nav-link:hover {
 
 .top-link {
   color: aqua;
+  text-decoration: none;
 }
 
 .top-link:hover {
   font-weight: bolder;
+  color: aqua !important;
+}
+
+.techs {
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /*

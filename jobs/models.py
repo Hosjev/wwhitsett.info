@@ -24,7 +24,7 @@ class Job(models.Model):
     #     return " ".join(summarized[:max_words]) + "..."
 
     def from_date_pretty(self):
-        return self.from_date.strftime("%b-%d-%Y")
+        return self.from_date.strftime("%b-%Y")
 
     def to_date_pretty(self):
-        return self.to_date.strftime("%b-%d-%Y")
+        return self.to_date.strftime("%b-%Y")

@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-12 mx-auto">
 
-                {% for job in jobs.all %}
+                {% for job in jobs.all|dictsortreversed:'from_date' %}
                 <div class="card card-body mb-2">
                     <div class="row p-2">
                         <div class="col-md-3">
@@ -16,7 +16,7 @@
                         </div>
                         <div class="col-md-6 text-left">
                             <h5 class="mb-3">{{ job.position }}</h5>
-                            <p>{{ job.summary }}</p>
+                            <p>{{ job.description }}</p>
                         </div>
                         <div class="col-md-3 m-auto">
                             <div class="p-2 text-center bg-light border rounded-3">
