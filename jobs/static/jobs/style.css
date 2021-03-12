@@ -119,7 +119,7 @@ i.far.fa-comment-dots.fa-6x {
 }
 
 .thought-container:hover .thought-bubble {
-  opacity: 0.05;
+  opacity: 0.04;
 }
 
 .thought-container:hover .thought-overlay {
@@ -167,5 +167,6 @@ i.far.fa-comment-dots.fa-6x {
   text-decoration: none;
   color: var(--bs-gray-dark);
   font-weight: bolder;
-  text-shadow: 0 0.05rem 2.1rem rgba(20, 0, 0, 30%);
+  /* text-shadow: 0 0.05rem 2.1rem rgba(20, 0, 0, 30%); */
+  text-shadow: 0 0.05rem 2.1rem rgba(12, 71, 173, 28%);
 }
