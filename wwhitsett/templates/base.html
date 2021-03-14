@@ -93,14 +93,6 @@
                             <div class="inner-text"><a id="past-info" href="#section-head">What has Wendi been up to lately?</a></div>
                         </div>
                     </div>
-                    <!-- <a id="past-info" href="#section-head">
-                        <div class="d-none d-md-block">
-                            <img src="{% static 'bubbleR.png' %}" alt="">
-                        </div>
-                        <div class="d-md-none">
-                            <img src="{% static 'bubbleL.png' %}" alt="">
-                        </div>
-                    </a> -->
                 </div>
             </div>
         </section>
@@ -224,7 +216,7 @@
                         </button>
                     </div>
                     <div class="modal-body bg-light">
-                        After the sale of my company, <strong>ITA Software</strong>, to <strong>Google</strong>, I took some time off to write, donate some of my technical skills to non-profits (mostly UX/UI work), delve into the doggy rescue business, and learn fencing. You can see some of the fruits of my labor <a href="http://wstone.site" target="_blank">here</a>. But after intense study over the past six months, I'm ready to tackle the next technical challenge! I love coding, and more so, I love problem-solving!
+                        After the sale of my company, <strong>ITA Software</strong>, to <strong>Google</strong>, I took some time off to write, donate my technical skills to non-profits (mostly UX/UI work), delve into the doggy rescue business, and learn fencing. You can see some of the fruits of my labor <a href="http://wstone.site" target="_blank">here</a>. But after intense study over the past six months, I'm ready to tackle the next technical challenge! I love coding, and more so, I love problem-solving!
                     </div>
                 </div>
             </div>
@@ -258,12 +250,14 @@
 
     </main>
 
-    <footer class="text-muted py-3 mt-5 bg-dark text-white">
+    <footer class="text-muted py-3 mt-5 bg-dark">
         <div class="container">
             <p class="float-end mb-1">
                 <a class="top-link" href="#">Back to top</a>
             </p>
-            <p>Copyright &copy; Wendi Whitsett <span>{% now "Y" %}</span></p>
+            <p style="color: azure; letter-spacing: 1.1px;">Copyright &copy; Wendi Whitsett <span>{% now "Y" %}</span>
+                <span class="d-none d-sm-block" style="color: gray; letter-spacing: .5px;">**powered by Django/Bootstrap/JS stack</span>
+            </p>
         </div>
     </footer>
 
