@@ -30,7 +30,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top text-white px-4">
             <div class="container-fluid mx-md-5">
-                <a class="navbar-brand" href="{% url 'home' %}">Wendi Whitsett</a>
+                <a class="navbar-brand nav-title" href="{% url 'home' %}">Wendi Whitsett</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -38,27 +38,45 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <div class="px-sm-3">
+                        <div class="px-sm-3 nav-tip">
                             <a class="nav-link"
                             id="study-info"
                             href="#section-head">
-                                <i class="fa fa-chalkboard-teacher fa-2x"></i>
+                                <div class="d-none d-sm-block">
+                                    <i class="fa fa-chalkboard-teacher fa-2x"></i>
+                                    <span class="navtiptext">Study</span>
+                                </div>
+                                <div class="mobile-text d-sm-none">
+                                    Recent Study
+                                </div>
                             </a>
                         </div>
-                        <div class="px-sm-3">
+                        <div class="px-sm-3 nav-tip">
                             <a
                             class="nav-link"
                             href="https://github.com/Hosjev"
                             target="_blank">
-                                <i class="fab fa-github fa-2x"></i>
+                                <div class="d-none d-sm-block">
+                                    <i class="fab fa-github fa-2x"></i>
+                                    <span class="navtiptext">Github</span>
+                                </div>
+                                <div class="d-sm-none mobile-text">
+                                    Github
+                                </div>
                             </a>
                         </div>
-                        <div class="px-sm-3">
+                        <div class="px-sm-3 nav-tip">
                             <a
                             class="nav-link"
                             href="https://www.linkedin.com/in/wendi-whitsett"
                             target="_blank">
-                                <i class="fab fa-linkedin fa-2x"></i>
+                                <div class="d-none d-sm-block">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                    <span class="navtiptext">LinkedIn</span>
+                                </div>
+                                <div class="d-sm-none mobile-text">
+                                    LinkedIn
+                                </div>
                             </a>
                         </div>
                         <div class="px-sm-3">
@@ -86,7 +104,7 @@
                     height="265"
                     class="img img-fluid"
                     style="box-shadow: 0 2px 5px rgba(0, 0, 0, 70%);">
-                    <p class="lead text-muted pt-2">Hi there! I'm a software engineer with 18+ years of experience and looking for my next grand adventure in the industry. Check out my most recent work below or simply download my resume up top.</p>
+                    <p class="lead text-muted pt-2">Hi there! I'm a software/systems engineer with 18+ years of experience and looking for my next grand adventure in the industry. Check out my most recent work below or simply download my resume up top.</p>
                     <div class="pt-0 pb-2"><a
                         href="mailto:hosjev@gmail.com"
                         class="btn btn-primary my-2"
@@ -283,8 +301,6 @@
 
 
     <script>
-        // Init tooltips
-        // $('[data-toggle="tooltip"]').tooltip();
     </script>
 </body>
 

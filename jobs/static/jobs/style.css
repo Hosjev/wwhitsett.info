@@ -77,12 +77,48 @@ Page layout
   padding-top: 80px !important;
 }
 
+.nav-title {
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+}
+
 a.nav-link {
   color: aliceblue !important;
 }
 
 a.nav-link:hover {
   color: aqua !important;
+}
+
+.nav-tip {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-tip .navtiptext {
+  visibility: hidden;
+  width: 90px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -45px;
+}
+
+.nav-tip:hover .navtiptext {
+  visibility: visible;
+}
+
+.mobile-text {
+  color: aqua;
+  font-size: 1.08rem;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
 }
 
 #resume-link {
